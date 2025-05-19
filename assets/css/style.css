@@ -187,14 +187,14 @@ p {
 }
 
 #header .logo {
-  font-size: 30px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  letter-spacing: 1px;
-  font-family: "Playfair Display", sans-serif;
-  font-style: italic;
+  letter-spacing: 2px;
+  font-family: inherit;
+  font-style: normal;
 }
 
 #header .logo a {
