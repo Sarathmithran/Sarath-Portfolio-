@@ -25,6 +25,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
@@ -55,7 +57,7 @@
   <div id="hero" class="home">
 
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
         <h1>I'm <span class="typed" data-typed-items="Sarath TV, Frontend Developer, Freelancer"></span></h1>
         <p>Frontend Developer</p>
 
@@ -77,7 +79,7 @@
         <div class="row justify-content-between">
 
           <div class="col-lg-4 ">
-            <div class="div-img-bg">
+            <div class="div-img-bg" data-aos="fade-right" data-aos-delay="100">
               <div class="about-img">
                 <img src="assets/img/1744901134103.webp" class="img-responsive" alt="me">
               </div>
@@ -85,7 +87,7 @@
           </div>
 
           <div class="col-lg-7">
-            <div class="about-descr">
+            <div class="about-descr" data-aos="fade-left" data-aos-delay="100">
               <p class="p-heading">
                 Hello! I'm a Frontend Developer with 1 year of experience building responsive and scalable web applications using React.
                 I also have intermediate experience in backend development with Laravel (PHP) and MySQL, 
@@ -439,19 +441,19 @@
     <div id="resume" class="paddsection" style="padding-bottom: 0 !important;">
 
       <div class="container">
-        <div class="section-title text-center">
+        <div class="section-title text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
           <h2>My Resume</h2>
         </div>
       </div>
 
       <div class="container">
-        <header>
+        <header data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
           <h1>SARATH TV</h1>
           <p>Frontend Developer</p>
           <p>Email : sarathmithran99@gmail.com | Phone : 9961092659</p>
         </header>
 
-        <div class="section summary">
+        <div class="section summary" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2>Profile</h2>
           <p>Frontend developer with one year of experience building scalable and responsive web applications.
                 Strong in creating intuitive user interfaces, implementing real-time features, and optimizing
@@ -460,7 +462,7 @@
                 integration.</p>
         </div>
 
-        <div class="section skills">
+        <div class="section skills" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2>Skills</h2>
           <ul>
             <li>HTML</li>
@@ -485,7 +487,7 @@
           </ul>
         </div>
 
-        <div class="section experience">
+        <div class="section experience" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2>Experience</h2>
           <div class="experience-item">
             <h3>Frontend Developer</h3>
@@ -526,7 +528,7 @@
           </div>
         </div>
 
-        <div class="section education">
+        <div class="section education" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
           <h2>Education</h2>
           <div class="education-item">
             <ul>
@@ -539,7 +541,7 @@
         </div>
 
         <!-- download resume -->
-        <div class="d-flex justify-content-center pt-4">
+        <div class="d-flex justify-content-center pt-4" data-aos="flip-up" data-aos-offset="200" data-aos-easing="ease-in-sine">
           <a href="https://drive.google.com/uc?export=download&id=12you-9kCfZnHcCkyFQWefGOChRdAazdZ"
             download="SARATH-TV.pdf">
             <span
@@ -554,7 +556,7 @@
     </div><!-- End Resume Section -->
 
     <!-- ======= Projects Section ======= -->
-    <div id="projects" class="text-left paddsection" style="padding-bottom: 0 !important;">
+    <div id="projects" class="text-left paddsection" style="padding-bottom: 0 !important;" data-aos="zoom-in-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
       <div class="container">
         <div class="section-title text-center">
@@ -672,7 +674,7 @@
           <div class="row">
 
             <div class="col-lg-6">
-              <div class="contact-contact">
+              <div class="contact-contact" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
 
                 <h2 class="mb-30">GET IN TOUCH</h2>
 
@@ -687,7 +689,7 @@
             </div>
 
             <div class="col-lg-6">
-              <section id="contact">
+              <section id="contact" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
                 <h2>CONTACT ME</h2>
                 <div class="d-flex flex-column pt-4">
                   <a class="whatsapp-button pb-3" href="https://wa.me/9961092659" target="_blank"
@@ -711,7 +713,7 @@
 
   <!-- ======= Footer ======= -->
   <div id="footer" class="text-center">
-    <div class="container">
+    <div class="container" data-aos="flip-left">
       <div class="socials-media text-center">
 
         <ul class="list-unstyled">
@@ -732,6 +734,11 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
