@@ -1,5 +1,128 @@
+:root {
+  /* Light mode colors */
+  --bg-body: #ffffff;
+  --bg-alt: #f7f7f7;
+  --bg-card: #ffffff;
+  --bg-tag: #f7f7f7;
+  --bg-pill: #f4f4f9;
+  --border-tag: #e0e0e0;
+  --border-color: #eaeaea;
+  --text-main: #636363;
+  --text-dark: #292929;
+  --text-muted: #999999;
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --header-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
+  --card-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  --accent-color: #b8a07e;
+  --accent-hover: #cab89f;
+  --danger-color: #f73030;
+  --input-border: #999;
+  --input-text: #999999;
+  --tag-hover-bg: #b8a07e;
+  --tag-text: #555;
+  --blockquote-bg: #f2f2f2;
+}
+
+[data-theme="dark"] {
+  /* Dark mode colors */
+  --bg-body: #121212;
+  --bg-alt: #1a1a1a;
+  --bg-card: #222222;
+  --bg-tag: #2a2a2a;
+  --bg-pill: #1f1f23;
+  --border-tag: #333333;
+  --border-color: #333333;
+  --text-main: #b0b0b0;
+  --text-dark: #f0f0f0;
+  --text-muted: #888888;
+  --header-bg: rgba(18, 18, 18, 0.95);
+  --header-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  --card-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.6);
+  --accent-color: #d1b894;
+  --accent-hover: #e3ccaa;
+  --danger-color: #ff4a4a;
+  --input-border: #444;
+  --input-text: #cccccc;
+  --tag-hover-bg: #d1b894;
+  --tag-text: #cccccc;
+  --blockquote-bg: #1a1a1e;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  margin-left: 20px;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--bg-pill);
+  transform: scale(1.1);
+}
+
+.theme-toggle-btn .theme-icon-light {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-btn .theme-icon-dark {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-btn .theme-icon-light {
+  display: block;
+  color: #f7d070;
+}
+
+/* Smooth transitions for theme toggle */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+i,
+#header,
+.navbar,
+.navbar a,
+.skill-tag,
+.skills li,
+.experience li,
+.education li,
+#about,
+#services,
+#portfolio,
+#journal,
+#footer,
+#contact,
+.journal-block,
+.journal-info,
+.journal-txt,
+.portfolio-details,
+.portfolio-info,
+blockquote,
+.form-control {
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
 body {
-  background: #ffffff;
+  background: var(--bg-body);
+  color: var(--text-main);
   font-family: "Poppins", helvetica;
   font-size: 15px;
   font-weight: 300;
@@ -1570,4 +1693,218 @@ blockquote {
 
 .devto-icon svg {
   vertical-align: middle;
+}
+
+/* ==========================================
+ * Premium Dark Mode Styling Overrides
+ * ========================================== */
+
+/* Core body & general backgrounds */
+body {
+  background: var(--bg-body);
+  color: var(--text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--text-dark);
+}
+
+/* Header & Navbar */
+#header {
+  background-color: var(--header-bg);
+  box-shadow: var(--header-shadow);
+}
+
+#header .logo a {
+  color: var(--text-dark);
+}
+
+.navbar a,
+.navbar a:focus {
+  color: var(--text-main);
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: var(--danger-color);
+}
+
+.navbar-mobile ul {
+  background-color: var(--bg-card);
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  color: var(--text-dark);
+}
+
+/* About, Services, Journal, Footer section backgrounds */
+#about {
+  background: var(--bg-alt);
+}
+
+#about .div-img-bg {
+  border-color: var(--accent-color);
+}
+
+#about .div-img-bg .about-img img {
+  box-shadow: var(--card-shadow);
+}
+
+#services {
+  background: var(--bg-alt);
+}
+
+.services-block span {
+  color: var(--text-dark);
+}
+
+.services-block i {
+  color: var(--accent-color);
+}
+
+/* Skills, Experience, Education */
+.skills li,
+.experience li,
+.education li {
+  background: var(--bg-pill);
+  color: var(--text-dark);
+}
+
+.experience-item h3 {
+  color: var(--text-dark);
+}
+
+.experience-item h4 {
+  color: var(--accent-color);
+}
+
+.section h2 {
+  color: var(--text-dark);
+  border-bottom-color: var(--border-color);
+}
+
+/* Skill Tags */
+.skill-tag {
+  color: var(--tag-text);
+  background: var(--bg-tag);
+  border-color: var(--border-tag);
+}
+
+.skill-tag:hover {
+  background: var(--tag-hover-bg);
+  color: #fff;
+  border-color: var(--tag-hover-bg);
+}
+
+/* Projects & Journal */
+#projects {
+  background: var(--bg-body);
+}
+
+.journal-block .journal-info {
+  background: var(--bg-card);
+  box-shadow: var(--header-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.journal-block .journal-info .journal-txt {
+  padding: 20px;
+}
+
+.journal-block .journal-info .journal-txt h6 a,
+.journal-block .journal-info .journal-txt h4 a {
+  color: var(--text-dark);
+}
+
+.journal-block .journal-info .journal-txt h6 a:hover,
+.journal-block .journal-info .journal-txt h4 a:hover {
+  color: var(--accent-color);
+}
+
+.journal-block .journal-info .journal-txt p {
+  color: var(--text-main);
+}
+
+/* Contact */
+#contact {
+  background: var(--bg-body);
+}
+
+.contact-details li span,
+.contact-details li a {
+  color: var(--text-main);
+}
+
+#contact h2 {
+  color: var(--text-dark);
+}
+
+.whatsapp-button,
+.email-button {
+  /* background-color: var(--bg-pill); */
+  color: var(--text-dark) !important;
+  /* border: 1px solid var(--border-tag); */
+  /* padding: 12px 20px; */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover,
+.email-button:hover {
+  /* background-color: var(--accent-color); */
+  color: var(--accent-color) !important;
+  /* border-color: var(--accent-color); */
+}
+
+/* Footer */
+#footer {
+  background: var(--bg-alt);
+}
+
+#footer .socials-media ul li a {
+  color: var(--text-muted);
+}
+
+#footer .socials-media ul li a:hover {
+  color: var(--accent-color);
+}
+
+#footer p {
+  color: var(--text-muted);
+}
+
+.credits {
+  color: var(--text-muted);
+}
+
+/* SVG icons adaptation for dark mode (NextJS, HTML, JS logos) */
+[data-theme="dark"] .services-block svg[fill="#000000"],
+[data-theme="dark"] .services-block svg[fill="#000"],
+[data-theme="dark"] .services-block svg[fill="black"],
+[data-theme="dark"] .services-block svg path[fill="#000000"],
+[data-theme="dark"] .services-block svg path[fill="#000"],
+[data-theme="dark"] .services-block svg path[fill="black"] {
+  fill: #ffffff !important;
+}
+
+[data-theme="dark"] .services-block svg[stroke="#000000"],
+[data-theme="dark"] .services-block svg[stroke="#000"],
+[data-theme="dark"] .services-block svg[stroke="black"],
+[data-theme="dark"] .services-block svg path[stroke="#000000"],
+[data-theme="dark"] .services-block svg path[stroke="#000"],
+[data-theme="dark"] .services-block svg path[stroke="black"] {
+  stroke: #ffffff !important;
 }

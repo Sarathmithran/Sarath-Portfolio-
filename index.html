@@ -58,7 +58,16 @@
       "url": "https://sarath-portfolio-ten.vercel.app/"
     }
   </script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
+
 
 <body>
 
@@ -68,16 +77,24 @@
 
       <a href="#" class="logo">Sarath</a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link  scrollto" href="#resume">Resume</a></li>
-          <li><a class="nav-link  scrollto" href="#projects">Projects</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      <div class="d-flex align-items-center">
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link  scrollto" href="#resume">Resume</a></li>
+            <li><a class="nav-link  scrollto" href="#projects">Projects</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark theme">
+          <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+          <i class="bi bi-sun-fill theme-icon-light"></i>
+        </button>
+      </div>
+
 
     </div>
   </header><!-- End Header -->
@@ -849,7 +866,7 @@
               <section id="contact" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
                 <h2>CONTACT ME</h2>
                 <div class="d-flex flex-column pt-4">
-                  <a class="whatsapp-button pb-3" href="https://wa.me/9961092659" target="_blank"
+                  <a class="whatsapp-button pb-3 mb-2" href="https://wa.me/9961092659" target="_blank"
                     rel="noopener noreferrer">
                     <span class="bi bi-whatsapp"></span>
                     Chat with me on WhatsApp
